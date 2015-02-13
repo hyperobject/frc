@@ -12,10 +12,10 @@ import org.usfirst.frc.team2972.robot.commands.*;
  */
 public class OI {
     
-     Joystick stick = new Joystick(1);
+     private static Joystick stick = new Joystick(1);
     
-     Button turrentRightButton = new JoystickButton(stick, RobotMap.turrentRightButtonPort);
-     Button turretLeftButton = new JoystickButton(stick,RobotMap.turrentLeftButtonPort);
+     Button turrentRightButton = new JoystickButton(getStick(), RobotMap.turrentRightButtonPort);
+     Button turretLeftButton = new JoystickButton(getStick(),RobotMap.turrentLeftButtonPort);
      
      public OI(){
     	 turrentRightButton.whileHeld(new TurretCommand(1));
@@ -24,6 +24,14 @@ public class OI {
     	 turretLeftButton.whileHeld(new TurretCommand(-1));
     	 turretLeftButton.whenReleased(new TurretStopCommand());
      }
+
+	public static Joystick getStick() {
+		return stick;
+	}
+
+	public static void setStick(Joystick stick) {
+		OI.stick = stick;
+	}
 
      
      
