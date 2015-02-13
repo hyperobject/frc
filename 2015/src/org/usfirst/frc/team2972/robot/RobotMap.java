@@ -9,5 +9,10 @@ import edu.wpi.first.wpilibj.Talon;
  * floating around.
  */
 public class RobotMap {
-	public static Talon turretMotor = new Talon(4);
+	//motors
+	public static final int turrentMotorPort = 4;
+	
+	//buttons
+	public static final int turrentRightButtonPort = 1;
+	public static final int turrentLeftButtonPort = 2;
 }

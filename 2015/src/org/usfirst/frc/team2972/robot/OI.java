@@ -14,10 +14,15 @@ public class OI {
     
      Joystick stick = new Joystick(1);
     
-     Button button = new JoystickButton(stick, 1);
+     Button turrentRightButton = new JoystickButton(stick, RobotMap.turrentRightButtonPort);
+     Button turretLeftButton = new JoystickButton(stick,RobotMap.turrentLeftButtonPort);
      
      public OI(){
-         button.whileHeld(new TurretCommand());
+    	 turrentRightButton.whileHeld(new TurretCommand(1));
+    	 turrentRightButton.whenReleased(new TurretStopCommand());
+         
+    	 turretLeftButton.whileHeld(new TurretCommand(-1));
+    	 turretLeftButton.whenReleased(new TurretStopCommand());
      }
 
      
