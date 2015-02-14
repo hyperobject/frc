@@ -17,12 +17,21 @@ public class OI {
      Button turretRightButton = new JoystickButton(getStick(), RobotMap.turretRightButtonPort);
      Button turretLeftButton = new JoystickButton(getStick(),RobotMap.turretLeftButtonPort);
      
+     Button grabberFirstButton = new JoystickButton(getStick(), RobotMap.grabberFirstButtonPort);
+     Button grabberSecondButton = new JoystickButton(getStick(),RobotMap.grabberSecondButtonPort);
+     
      public OI(){
     	 turretRightButton.whileHeld(new TurretCommand(1));
     	 turretRightButton.whenReleased(new TurretStopCommand());
          
     	 turretLeftButton.whileHeld(new TurretCommand(-1));
     	 turretLeftButton.whenReleased(new TurretStopCommand());
+    	 
+    	 grabberFirstButton.whileHeld(new GrabberCommandOpen(1));
+    	 grabberFirstButton.whenReleased(new GrabberCommandOpen(0));
+         
+    	 grabberSecondButton.whileHeld(new GrabberCommandOpen(-1));
+    	 grabberSecondButton.whenReleased(new GrabberCommandOpen(0));
      }
 
 	public static Joystick getStick() {

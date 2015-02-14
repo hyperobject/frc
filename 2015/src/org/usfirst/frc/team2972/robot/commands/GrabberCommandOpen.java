@@ -9,9 +9,12 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
  */
 public class GrabberCommandOpen extends CommandBase {
 
-    public GrabberCommandOpen() {
+	private int direction;
+	
+    public GrabberCommandOpen(int dir) {
     	super("GrabberCommandOpen");
         requires(grabber);
+        int direction = dir;
     	// Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -22,7 +25,13 @@ public class GrabberCommandOpen extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	if (direction == 1) {
     	grabber.open();
+    	} else if (direction == -1) {
+    	grabber.close();
+    	} else {
+    	grabber.stop();
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -32,7 +41,6 @@ public class GrabberCommandOpen extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
-    	grabber.stop();
     }
 
     // Called when another command which requires one or more of the same
