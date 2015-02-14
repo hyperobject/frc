@@ -22,12 +22,12 @@ public class Turret extends Subsystem {
     
     public void turnRight(){
     	turretMotor.set(1*speed);
-    	turretMotor2.set(-1*speed);
+    	turretMotor2.set(1*speed);
     }
     
     public void turnLeft(){
     	turretMotor.set(-1*speed);
-    	turretMotor2.set(1*speed);
+    	turretMotor2.set(-1*speed);
     }
     
     public void stop(){
