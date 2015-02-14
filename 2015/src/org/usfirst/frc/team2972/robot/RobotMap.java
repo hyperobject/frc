@@ -18,5 +18,5 @@ public class RobotMap {
 	
 	//buttons
 	public static final int turretRightButtonPort = 1;
-	public static final int turretLeftButtonPort  = 2; 
+	public static final int turretLeftButtonPort  = 2;
 }
