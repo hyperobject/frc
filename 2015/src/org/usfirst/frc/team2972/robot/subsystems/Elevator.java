@@ -19,15 +19,15 @@ public class Elevator extends Subsystem {
     }
     
     public void lift() {
-    	//TODO
+    	elevatorMotor.set(1*speed);
     }
     
     public void lower() {
-    	//TODO
+    	elevatorMotor.set(-1*speed);
     }
     
     public void stop() {
-    	//TODO
+    	elevatorMotor.set(0);
     }
 }
 
