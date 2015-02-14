@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
+import org.usfirst.frc.team2972.robot.commands.Autonomous;
 import org.usfirst.frc.team2972.robot.commands.CommandBase;
 import org.usfirst.frc.team2972.robot.subsystems.*;
 /**
@@ -33,6 +34,8 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		CommandBase.init();
+		
+		autonomousCommand = new Autonomous();
     }
 	
 	public void disabledPeriodic() {
