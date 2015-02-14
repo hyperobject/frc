@@ -24,5 +24,9 @@ public class StoreTote extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
+    	addParallel(new LiftElevator());
+    	addSequential(new RotateTurret(-1));
+    	addSequential(new GrabberDrop());
+    	addSequential(new RotateTurret(1));
     }
 }

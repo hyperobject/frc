@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class StrafeRight extends CommandBase {
 	private double speed = 0.3;
+	private boolean isDone = false;
     public StrafeRight() {
     	super("StrafeRight");
     	requires(mecanumDrive);
@@ -23,11 +24,12 @@ public class StrafeRight extends CommandBase {
     protected void execute() {
     	mecanumDrive.drive( 0, 0, speed);
     	Timer.delay(5);
+    	isDone = true;
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return isDone;
     }
 
     // Called once after isFinished returns true
