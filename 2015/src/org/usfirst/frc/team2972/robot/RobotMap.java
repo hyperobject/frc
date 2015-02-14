@@ -29,8 +29,8 @@ public class RobotMap {
 	//Double Solenoid
 	public static final int grabberSolenoidPort = 7;
 	public static final int grabberSolenoidPort2 = 8;
-	public static final int dropperSolenoidPort = 5;
-	public static final int dropperSolenoidPort2 = 6;
+	public static final int dropperSolenoidPort = 9;
+	public static final int dropperSolenoidPort2 = 10;
 	
 	//sensors
 	public static final int arduinoPort = 0;
