@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.Talon;
  */
 public class RobotMap {
 	//motors
-	public static final int elevatorMotor = 4;
+	public static final int elevatorMotorPort = 4;
 	public static final int turretMotorPort1 = 5;
 	public static final int turretMotorPort2 = 6;
 	public static final int frontLeftPort	= 0;
