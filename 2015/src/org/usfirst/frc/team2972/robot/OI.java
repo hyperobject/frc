@@ -25,10 +25,10 @@ public class OI {
      
      public OI(){
     	 turretRightButton.whileHeld(new TurretCommand(1));
-    	 turretRightButton.whenReleased(new TurretStopCommand());
+    	 turretRightButton.whenReleased(new TurretCommand(0));
          
     	 turretLeftButton.whileHeld(new TurretCommand(-1));
-    	 turretLeftButton.whenReleased(new TurretStopCommand());
+    	 turretLeftButton.whenReleased(new TurretCommand(0));
     	 
     	 grabberFirstButton.whileHeld(new GrabberCommand(1));
     	 grabberFirstButton.whenReleased(new GrabberCommand(0));
