@@ -7,11 +7,11 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 /**
  *
  */
-public class GrabberCommandOpen extends CommandBase {
+public class GrabberCommand extends CommandBase {
 
 	private int direction;
 	
-    public GrabberCommandOpen(int dir) {
+    public GrabberCommand(int dir) {
     	super("GrabberCommandOpen");
         requires(grabber);
         int direction = dir;

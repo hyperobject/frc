@@ -27,11 +27,11 @@ public class OI {
     	 turretLeftButton.whileHeld(new TurretCommand(-1));
     	 turretLeftButton.whenReleased(new TurretStopCommand());
     	 
-    	 grabberFirstButton.whileHeld(new GrabberCommandOpen(1));
-    	 grabberFirstButton.whenReleased(new GrabberCommandOpen(0));
+    	 grabberFirstButton.whileHeld(new GrabberCommand(1));
+    	 grabberFirstButton.whenReleased(new GrabberCommand(0));
          
-    	 grabberSecondButton.whileHeld(new GrabberCommandOpen(-1));
-    	 grabberSecondButton.whenReleased(new GrabberCommandOpen(0));
+    	 grabberSecondButton.whileHeld(new GrabberCommand(-1));
+    	 grabberSecondButton.whenReleased(new GrabberCommand(0));
      }
 
 	public static Joystick getStick() {
