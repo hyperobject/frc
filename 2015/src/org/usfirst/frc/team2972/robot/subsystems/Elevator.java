@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2972.robot.subsystems;
 
 import org.usfirst.frc.team2972.robot.RobotMap;
+import org.usfirst.frc.team2972.robot.commands.ElevatorMoveCommand;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -16,6 +17,7 @@ public class Elevator extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	setDefaultCommand(new ElevatorMoveCommand());
     }
     
     public void lift() {
