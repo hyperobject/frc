@@ -14,14 +14,14 @@ public class OI {
     
      private static Joystick stick = new Joystick(1);
     
-     Button turretRightButton = new JoystickButton(getStick(), RobotMap.turretRightButtonPort);
-     Button turretLeftButton = new JoystickButton(getStick(),RobotMap.turretLeftButtonPort);
+     //Button turretRightButton = new JoystickButton(getStick(), RobotMap.turretRightButtonPort);
+     //Button turretLeftButton = new JoystickButton(getStick(),RobotMap.turretLeftButtonPort);
      
      Button grabberFirstButton = new JoystickButton(getStick(), RobotMap.grabberFirstButtonPort);
      Button grabberSecondButton = new JoystickButton(getStick(),RobotMap.grabberSecondButtonPort);
      
-     Button elevatorFirstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
-     Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
+     //Button elevatorFirstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
+     //Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
      public OI(){
     	 
