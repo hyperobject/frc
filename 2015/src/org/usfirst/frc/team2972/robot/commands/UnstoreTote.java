@@ -1,28 +1,27 @@
 package org.usfirst.frc.team2972.robot.commands;
 
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
+
 /**
  *
  */
-public class GrabberDrop extends CommandBase {
+public class UnstoreTote extends CommandBase {
     private boolean isDone = false;
-    public GrabberDrop() {
-    	super("GrabberDrop");
-        requires(grabber);
+    public UnstoreTote() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	requires(dropper);
     }
 
-    // Called just before this Command runs the first time
     protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	grabber.open();
+    	dropper.out();
     	Timer.delay(2);
-    	grabber.stop();
+    	dropper.stop();
     	isDone = true;
     }
 
@@ -33,10 +32,12 @@ public class GrabberDrop extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
+    	dropper.in();
+    	Timer.delay(2);
+    	dropper.stop();
     }
-
-    // Called when another command which requires one or more of the same
-    // subsystems is scheduled to run
+    
     protected void interrupted() {
+    	
     }
 }

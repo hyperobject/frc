@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2972.robot.commands;
 
 import org.usfirst.frc.team2972.robot.OI;
+import org.usfirst.frc.team2972.robot.subsystems.Dropper;
 import org.usfirst.frc.team2972.robot.subsystems.Elevator;
 import org.usfirst.frc.team2972.robot.subsystems.Grabber;
 import org.usfirst.frc.team2972.robot.subsystems.Kinect;
@@ -20,6 +21,7 @@ public class CommandBase extends Command {
 	public static MecanumDrive mecanumDrive = new MecanumDrive();
 	public static Elevator elevator = new Elevator();
 	public static Grabber grabber = new Grabber();
+	public static Dropper dropper = new Dropper();
 	public static Kinect kinect = new Kinect();
 	
 	public static OI oi;

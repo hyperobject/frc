@@ -37,5 +37,8 @@ public class Autonomous extends CommandGroup {
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
     	addSequential(new StoreTote());
+    	
+    	addSequential(new StrafeRight());
+    	addSequential(new UnstoreTote());
     }
 }
