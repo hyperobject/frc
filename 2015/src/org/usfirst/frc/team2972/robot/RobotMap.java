@@ -21,8 +21,8 @@ public class RobotMap {
 	//buttons
 	public static final int turretRightButtonPort = 6;
 	public static final int turretLeftButtonPort  = 4;
-	public static final int grabberFirstButtonPort = 5;
-	public static final int grabberSecondButtonPort = 3;
+	public static final int grabberFirstButtonPort = 6;
+	public static final int grabberSecondButtonPort = 5;
 	
 	//Double Solenoid
 	public static final int grabberSolenoidPort = 7;
