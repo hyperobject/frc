@@ -11,7 +11,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Elevator extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort);
+	
+public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort);
 	double defaultSpeed = .5;
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

@@ -16,7 +16,7 @@ public class Turret extends Subsystem {
     double speed = .5;
     
     public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
+    	// Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
     
