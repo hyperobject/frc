@@ -1,5 +1,6 @@
 package org.usfirst.frc.team2972.robot.commands;
 
+import org.usfirst.frc.team2972.robot.OI;
 import org.usfirst.frc.team2972.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Talon;
@@ -13,9 +14,8 @@ public class TurretCommand extends CommandBase {
 	
 	private int direction;
 	
-    public TurretCommand(int dir) {
+    public TurretCommand() {
     	super("TurretCommand");
-    	direction = dir;
         requires(turret);
     }
     
@@ -26,7 +26,7 @@ public class TurretCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	turret.turn(direction);
+    	turret.control(OI.getStick().getRawAxis(4));
     }
 
     // Make this return true when this Command no longer needs to run execute()

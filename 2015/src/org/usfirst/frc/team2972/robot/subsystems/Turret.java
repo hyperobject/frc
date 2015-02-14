@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2972.robot.subsystems;
 
 import org.usfirst.frc.team2972.robot.RobotMap;
+import org.usfirst.frc.team2972.robot.commands.TurretCommand;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -18,6 +19,7 @@ public class Turret extends Subsystem {
     public void initDefaultCommand() {
     	// Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	setDefaultCommand(new TurretCommand());
     }
     
     public void turnRight(){
@@ -35,6 +37,10 @@ public class Turret extends Subsystem {
     	turretMotor2.set(0);
     }
     
+    public void control(double val) {
+    	turretMotor.set(val);
+    	turretMotor2.set(val);
+    }
     public void turn(int dir){
     	turretMotor.set(dir*speed);
     	turretMotor2.set(dir*speed);
