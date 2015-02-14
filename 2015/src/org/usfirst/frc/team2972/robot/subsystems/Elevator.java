@@ -1,6 +1,7 @@
 package org.usfirst.frc.team2972.robot.subsystems;
 
 import org.usfirst.frc.team2972.robot.RobotMap;
+import org.usfirst.frc.team2972.robot.commands.ElevatorMoveCommand;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -17,6 +18,7 @@ public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort);
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	setDefaultCommand(new ElevatorMoveCommand());
     }
     
     public void lift() {
@@ -27,7 +29,7 @@ public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort);
     	elevatorMotor.set(-1*defaultSpeed);
     }
     
-    public void control(int val) {
+    public void control(double val) {
     	elevatorMotor.set(val);
     }
     
