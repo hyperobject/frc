@@ -1,5 +1,7 @@
 package org.usfirst.frc.team2972.robot.commands;
 
+import org.usfirst.frc.team2972.robot.OI;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -17,7 +19,7 @@ public class MecanumDriveCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	mecanumDrive.drive(oi.getStick().getX(), oi.getStick().getY(), oi.getStick().getZ());
+    	mecanumDrive.drive(OI.getStick().getX(), OI.getStick().getY(), OI.getStick().getZ());
     }
 
     // Make this return true when this Command no longer needs to run execute()
