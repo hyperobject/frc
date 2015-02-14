@@ -17,5 +17,17 @@ public class Elevator extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
+    
+    public void lift() {
+    	//TODO
+    }
+    
+    public void lower() {
+    	//TODO
+    }
+    
+    public void stop() {
+    	//TODO
+    }
 }
 
