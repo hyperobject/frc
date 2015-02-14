@@ -3,15 +3,17 @@ package org.usfirst.frc.team2972.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
- *
+ *@author connor hudson
  */
-public class ElevatorLower extends CommandBase {
+public class ElevatorCommand extends CommandBase {
 
-    public ElevatorLower() {
+	private int direction;
+    public ElevatorCommand(int dir) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	super("ElevatorLower");
+    	super("ElevatorLift");
     	requires(elevator);
+    	direction = dir;
     }
 
     // Called just before this Command runs the first time
@@ -20,7 +22,13 @@ public class ElevatorLower extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	elevator.lower();
+    	if (direction == 1){
+    		elevator.lift();
+    	} else if (direction == -1) {
+    		elevator.lower();
+    	} else {
+    		elevator.stop();
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
