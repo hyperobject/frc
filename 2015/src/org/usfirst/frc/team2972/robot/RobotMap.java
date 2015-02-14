@@ -10,13 +10,13 @@ import edu.wpi.first.wpilibj.Talon;
  */
 public class RobotMap {
 	//motors
-	public static final int turrentMotorPort = 4;
+	public static final int turretMotorPort = 4;
 	public static final int frontLeftPort	= 0;
 	public static final int rearLeftPort	= 1;
 	public static final int frontRightPort	= 2;
 	public static final int rearRightPort	= 3;
 	
 	//buttons
-	public static final int turrentRightButtonPort = 1;
-	public static final int turrentLeftButtonPort  = 2;
+	public static final int turretRightButtonPort = 1;
+	public static final int turretLeftButtonPort  = 2; 
 }
