@@ -1,7 +1,7 @@
 package org.usfirst.frc.team2972.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-
+import edu.wpi.first.wpilibj.Timer;
 
 /**
  *
@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class PickUp extends CommandBase {
 
 	
-    public PickUp(int dir) {
+    public PickUp() {
     	super("PickUp");
         requires(grabber);
         // Use requires() here to declare subsystem dependencies
@@ -23,14 +23,17 @@ public class PickUp extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	grabber.open();
+    	Timer.delay(2);
     	grabber.stop();
-    	
-        	
-    }
+    	Timer.delay(1);
+    	grabber.close();
+    	Timer.delay(2);
+    	grabber.stop();
+   }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-    	grabber.close();
+    	
     	return false;
     }
 
