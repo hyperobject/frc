@@ -24,23 +24,12 @@ public class OI {
      Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
      public OI(){
-    	 turretRightButton.whileHeld(new TurretCommand(1));
-    	 turretRightButton.whenReleased(new TurretCommand(0));
-         
-    	 turretLeftButton.whileHeld(new TurretCommand(-1));
-    	 turretLeftButton.whenReleased(new TurretCommand(0));
     	 
     	 grabberFirstButton.whileHeld(new GrabberCommand(1));
     	 grabberFirstButton.whenReleased(new GrabberCommand(0));
          
     	 grabberSecondButton.whileHeld(new GrabberCommand(-1));
     	 grabberSecondButton.whenReleased(new GrabberCommand(0));
-    	 
-    	 elevatorFirstButton.whileHeld(new ElevatorCommand(1));
-    	 elevatorFirstButton.whenReleased(new ElevatorCommand(0));
-         
-    	 elevatorSecondButton.whileHeld(new ElevatorCommand(-1));
-    	 elevatorSecondButton.whenReleased(new ElevatorCommand(0));
     	 
     	 
      }
