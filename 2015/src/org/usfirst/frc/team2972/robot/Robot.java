@@ -4,10 +4,11 @@ package org.usfirst.frc.team2972.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team2972.robot.commands.CommandBase;
-
+//import org.usfirst.frc.team2972.robot.subsystems.*;
 /**
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the IterativeRobot
@@ -18,9 +19,13 @@ import org.usfirst.frc.team2972.robot.commands.CommandBase;
 public class Robot extends IterativeRobot {
 
 	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final Subsystem Elevator = new Subsystem();
+	public static final Subsystem MecanumDrive = new Subsystem();
+	public static final Subsystem Turret = new Subsystem();
 	public static OI oi;
 
     Command autonomousCommand;
+   
 
     /**
      * This function is run when the robot is first started up and should be
