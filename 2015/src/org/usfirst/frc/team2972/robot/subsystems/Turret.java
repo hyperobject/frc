@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Turret extends Subsystem {
     
-	public static Talon turretMotor = new Talon(RobotMap.turretMotorPort);
+	public static Talon turretMotor = new Talon(RobotMap.turretMotorPort1);
 	public static Talon turretMotor2 = new Talon(RobotMap.turretMotorPort2);
 	
     double speed = .5;
