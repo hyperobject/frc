@@ -20,6 +20,9 @@ public class OI {
      Button grabberFirstButton = new JoystickButton(getStick(), RobotMap.grabberFirstButtonPort);
      Button grabberSecondButton = new JoystickButton(getStick(),RobotMap.grabberSecondButtonPort);
      
+     Button elevatorFirstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
+     Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
+     
      public OI(){
     	 turretRightButton.whileHeld(new TurretCommand(1));
     	 turretRightButton.whenReleased(new TurretStopCommand());
@@ -32,6 +35,14 @@ public class OI {
          
     	 grabberSecondButton.whileHeld(new GrabberCommand(-1));
     	 grabberSecondButton.whenReleased(new GrabberCommand(0));
+    	 
+    	 elevatorFirstButton.whileHeld(new ElevatorCommand(1));
+    	 elevatorFirstButton.whenReleased(new ElevatorCommand(0));
+         
+    	 elevatorSecondButton.whileHeld(new ElevatorCommand(-1));
+    	 elevatorSecondButton.whenReleased(new ElevatorCommand(0));
+    	 
+    	 
      }
 
 	public static Joystick getStick() {
