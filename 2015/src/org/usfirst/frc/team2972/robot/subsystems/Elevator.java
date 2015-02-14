@@ -26,7 +26,7 @@ public class Elevator extends Subsystem {
     	elevatorMotor.set(-1*defaultSpeed);
     }
     
-    public void control(int val) {
+    public void control(double val) {
     	elevatorMotor.set(val);
     }
     
