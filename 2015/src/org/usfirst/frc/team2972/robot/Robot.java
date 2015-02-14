@@ -17,7 +17,6 @@ import org.usfirst.frc.team2972.robot.subsystems.*;
  */
 public class Robot extends IterativeRobot {
 
-	//public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final Elevator elevator = new Elevator();
 	public static final MecanumDrive drive = new MecanumDrive();
 	public static final Turret turret = new Turret();
