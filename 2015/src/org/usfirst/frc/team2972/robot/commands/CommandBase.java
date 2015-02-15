@@ -22,7 +22,7 @@ public class CommandBase extends Command {
 	public static Elevator elevator = new Elevator();
 	public static Grabber grabber = new Grabber();
 	public static Dropper dropper = new Dropper();
-	public static Kinect kinect = new Kinect();
+	//public static Kinect kinect = new Kinect();
 	
 	public static OI oi;
 	

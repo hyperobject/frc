@@ -12,6 +12,7 @@ public class ElevatorMoveCommand extends CommandBase {
     public ElevatorMoveCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	super("ElevatorMoveCommand");
     	requires(elevator);
     }
 

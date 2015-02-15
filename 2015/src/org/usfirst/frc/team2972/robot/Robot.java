@@ -21,7 +21,7 @@ public class Robot extends IterativeRobot {
 
 	//public static final Elevator elevator = new Elevator();
 	//public static final MecanumDrive drive = new MecanumDrive();
-	public static final Turret turret = new Turret();
+//	public static final Turret turret = new Turret();
 	//public static final Grabber grabber = new Grabber();
 	//public static final Dropper dropper = new Dropper();
 	

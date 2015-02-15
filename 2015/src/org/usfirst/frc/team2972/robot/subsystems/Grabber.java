@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
  */
 public class Grabber extends Subsystem {
 	
-	public static DoubleSolenoid grabberSolenoid = new DoubleSolenoid(RobotMap.grabberSolenoidPort, RobotMap.grabberSolenoidPort2);
+	public static DoubleSolenoid grabberSolenoid;// = new DoubleSolenoid(RobotMap.grabberSolenoidPort, RobotMap.grabberSolenoidPort2);
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 

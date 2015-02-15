@@ -11,9 +11,6 @@ import edu.wpi.first.wpilibj.Talon;
  */
 public class TurretCommand extends CommandBase {
 	
-	
-	private int direction;
-	
     public TurretCommand() {
     	super("TurretCommand");
         requires(turret);

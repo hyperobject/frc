@@ -13,7 +13,11 @@ public class Turret extends Subsystem {
     
 	public static Talon turretMotor = new Talon(RobotMap.turretMotorPort);
 	
-    double speed = .5;
+    double speed = .75;
+    
+    public Turret(){
+    	super();
+    }
     
     public void initDefaultCommand() {
     	// Set the default command for a subsystem here.

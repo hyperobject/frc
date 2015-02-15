@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Dropper extends Subsystem {
     
-	public static DoubleSolenoid dropperSolenoid = new DoubleSolenoid(RobotMap.dropperSolenoidPort, RobotMap.dropperSolenoidPort2);
+	public static DoubleSolenoid dropperSolenoid;// = new DoubleSolenoid(RobotMap.dropperSolenoidPort, RobotMap.dropperSolenoidPort2);
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 

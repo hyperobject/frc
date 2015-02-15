@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.command.Command;
 public class MecanumDriveCommand extends CommandBase {
 
     public MecanumDriveCommand() {
+    	super("MecanumDrive");
         requires(mecanumDrive);
     }
 
