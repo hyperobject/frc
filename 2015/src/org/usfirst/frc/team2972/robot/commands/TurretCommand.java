@@ -26,7 +26,7 @@ public class TurretCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	turret.control(OI.getStick().getRawAxis(4));
+    	turret.turn(OI.getStick().getRawAxis(4));
     }
 
     // Make this return true when this Command no longer needs to run execute()

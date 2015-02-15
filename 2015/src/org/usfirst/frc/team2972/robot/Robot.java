@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team2972.robot.commands.Autonomous;
 import org.usfirst.frc.team2972.robot.commands.CommandBase;
+import org.usfirst.frc.team2972.robot.commands.CommandBase;
 import org.usfirst.frc.team2972.robot.subsystems.*;
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -18,11 +19,11 @@ import org.usfirst.frc.team2972.robot.subsystems.*;
  */
 public class Robot extends IterativeRobot {
 
-	public static final Elevator elevator = new Elevator();
-	public static final MecanumDrive drive = new MecanumDrive();
+	//public static final Elevator elevator = new Elevator();
+	//public static final MecanumDrive drive = new MecanumDrive();
 	public static final Turret turret = new Turret();
-	public static final Grabber grabber = new Grabber();
-	public static final Dropper dropper = new Dropper();
+	//public static final Grabber grabber = new Grabber();
+	//public static final Dropper dropper = new Dropper();
 	
 	public static OI oi;
 
@@ -36,7 +37,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		CommandBase.init();
 		
-		autonomousCommand = new Autonomous();
+		//autonomousCommand = new Autonomous();
     }
 	
 	public void disabledPeriodic() {
