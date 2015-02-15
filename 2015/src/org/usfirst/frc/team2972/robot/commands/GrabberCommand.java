@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 public class GrabberCommand extends CommandBase {
 
 	private int direction;
-	
+	private boolean isDone = false;
     public GrabberCommand(int dir) {
     	super("GrabberCommandOpen");
         requires(grabber);
