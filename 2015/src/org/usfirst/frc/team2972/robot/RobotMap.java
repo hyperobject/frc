@@ -1,5 +1,6 @@
 package org.usfirst.frc.team2972.robot;
 
+import edu.wpi.first.wpilibj.BuiltInAccelerometer;
 import edu.wpi.first.wpilibj.Talon;
 
 /**
@@ -19,19 +20,20 @@ public class RobotMap {
 	public static final int rearRightPort	= 3;
 	
 	//buttons
-	public static final int grabberFirstButtonPort = 6;
-	public static final int grabberSecondButtonPort = 5;
+	public static final int grabberFirstButtonPort = 3;
+	public static final int grabberSecondButtonPort = 2;
 	public static final int dropperSolenoidButtonPort = 1;
 	public static final int dropperSolenoidButtonPort2 = 4;
 	
 	//Double Solenoid
-	public static final int grabberSolenoidPort = 7;
-	public static final int grabberSolenoidPort2 = 8;
-	public static final int dropperSolenoidPort = 9;
-	public static final int dropperSolenoidPort2 = 10;
+	public static final int grabberSolenoidPort = 2;
+	public static final int grabberSolenoidPort2 = 3;
+	public static final int dropperSolenoidPort = 0;
+	public static final int dropperSolenoidPort2 = 1;
 	
 	//sensors
 	public static final int arduinoPort = 0;
 	public static final int elevatorUpSwitchPort = 1; //TODO find the real ports for these
 	public static final int elevatorDownSwitchPort = 2;
+	public static BuiltInAccelerometer accelerometer = new BuiltInAccelerometer();
 }

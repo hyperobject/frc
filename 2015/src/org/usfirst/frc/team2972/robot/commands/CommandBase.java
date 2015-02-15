@@ -8,6 +8,7 @@ import org.usfirst.frc.team2972.robot.subsystems.Kinect;
 import org.usfirst.frc.team2972.robot.subsystems.MecanumDrive;
 import org.usfirst.frc.team2972.robot.subsystems.Turret;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -22,6 +23,8 @@ public class CommandBase extends Command {
 	public static Elevator elevator = new Elevator();
 	public static Grabber grabber = new Grabber();
 	public static Dropper dropper = new Dropper();
+	public static Compressor compressor = new Compressor(0);
+	
 	//public static Kinect kinect = new Kinect();
 	
 	public static OI oi;

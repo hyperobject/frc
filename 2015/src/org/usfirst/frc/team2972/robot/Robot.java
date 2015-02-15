@@ -37,6 +37,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		CommandBase.init();
 		
+		CommandBase.compressor.setClosedLoopControl(true);
+		
 		//autonomousCommand = new Autonomous();
     }
 	

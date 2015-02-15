@@ -23,22 +23,24 @@ public class OI {
      Button dropperSolenoidButton = new JoystickButton(getStick(), RobotMap.dropperSolenoidButtonPort);
      Button dropperSolenoidButton2 = new JoystickButton(getStick(),RobotMap.dropperSolenoidButtonPort2);
      
-     //Button elevatorFirstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
+     //Button elevato'''''''''''''''''''''''''''''irstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
      //Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
      public OI(){
     	 
-    	 //grabberFirstButton.whileHeld(new GrabberCommand(1));
-    	 //grabberFirstButton.whenReleased(new GrabberCommand(0));
+    	 grabberFirstButton.whileHeld(new GrabberCommand(1));
+    	 grabberFirstButton.whenReleased(new GrabberCommand(0));
          
-    	 //grabberSecondButton.whileHeld(new GrabberCommand(-1));
-    	 //grabberSecondButton.whenReleased(new GrabberCommand(0));
+    	 grabberSecondButton.whileHeld(new GrabberCommand(-1));
+    	 grabberSecondButton.whenReleased(new GrabberCommand(0));
     	 
-    	 //dropperSolenoidButton.whileHeld(new UnstoreToteManual(1));
-    	 //dropperSolenoidButton.whenReleased(new UnstoreToteManual(0));
+    	 dropperSolenoidButton.whileHeld(new UnstoreToteManual(1));
+    	 dropperSolenoidButton.whenReleased(new UnstoreToteManual(0));
     	 
-    	 //dropperSolenoidButton2.whileHeld(new UnstoreToteManual(-1));
-    	 //dropperSolenoidButton2.whenReleased(new UnstoreToteManual(0));
+    	 dropperSolenoidButton2.whileHeld(new UnstoreToteManual(-1));
+    	 dropperSolenoidButton2.whenReleased(new UnstoreToteManual(0));
+    	 
+    	 
      }
 
 	public static Joystick getStick() {
