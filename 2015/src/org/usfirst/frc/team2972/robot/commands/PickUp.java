@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.Timer;
  */
 public class PickUp extends CommandBase {
 
-	
+	private boolean isDone = false;
     public PickUp() {
     	super("PickUp");
         requires(grabber);
@@ -29,12 +29,13 @@ public class PickUp extends CommandBase {
     	grabber.close();
     	Timer.delay(2);
     	grabber.stop();
+    	isDone = true;
    }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
     	
-    	return false;
+    	return isDone;
     }
 
     // Called once after isFinished returns true

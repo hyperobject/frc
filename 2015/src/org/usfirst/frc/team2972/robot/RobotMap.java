@@ -36,4 +36,6 @@ public class RobotMap {
 	
 	//sensors
 	public static final int arduinoPort = 0;
+	public static final int elevatorUpSwitchPort = 1; //TODO find the real ports for these
+	public static final int elevatorDownSwitchPort = 2;
 }

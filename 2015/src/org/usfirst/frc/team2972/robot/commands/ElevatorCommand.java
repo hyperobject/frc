@@ -26,14 +26,18 @@ public class ElevatorCommand extends CommandBase {
     		elevator.lift();
     	} else if (direction == -1) {
     		elevator.lower();
-    	} else {
-    		elevator.stop();
     	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        if (direction == 1){
+        	return elevator.up();
+        } else if (direction == -1){
+        	return elevator.down();
+        } else{
+        	return true;
+        }
     }
 
     // Called once after isFinished returns true
