@@ -13,7 +13,7 @@ public class Turret extends Subsystem {
     
 	public static Talon turretMotor = new Talon(RobotMap.turretMotorPort);
 	
-    double speed = .75;
+    double speed = 1;
     
     public Turret(){
     	super();

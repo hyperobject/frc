@@ -20,7 +20,7 @@ public class MecanumDriveCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	mecanumDrive.drive(OI.getStick().getRawAxis(0), OI.getStick().getRawAxis(1), (OI.getStick().getRawAxis(2) - OI.getStick().getRawAxis(3)));
+    	mecanumDrive.drive(OI.getStick().getRawAxis(0), OI.getStick().getRawAxis(1), (OI.getStick().getRawAxis(3) - OI.getStick().getRawAxis(2)));
     }
 
     // Make this return true when this Command no longer needs to run execute()
