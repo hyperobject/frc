@@ -33,9 +33,10 @@ public class RobotMap {
 	
 	//sensors
 	public static final int arduinoPort = 0;
-	public static final int elevatorUpSwitchPort = 1; //TODO find the real ports for these
-	public static final int elevatorDownSwitchPort = 2;
+	public static final int elevatorUpSwitchPort = 0; 
+	public static final int elevatorDownSwitchPort = 1;
 	public static final int[] turretDirs = {1,2,3,4};
 	public static final int turretMax = 4020;
 	public static final int turretMin = 135;
+	
 }

@@ -16,8 +16,10 @@ public class Elevator extends Subsystem {
 	
 	public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort1);
 	public static Talon elevatorMotor2 = new Talon(RobotMap.elevatorMotorPort2);
+	
 	public static DigitalInput elevatorUpSwitch = new DigitalInput(RobotMap.elevatorUpSwitchPort);
 	public static DigitalInput elevatorDownSwitch = new DigitalInput(RobotMap.elevatorDownSwitchPort);
+	
 	double defaultSpeed = 1;
 	
     public void initDefaultCommand() {
@@ -27,18 +29,27 @@ public class Elevator extends Subsystem {
     }
     
     public void lift() {
-    	elevatorMotor.set(1*defaultSpeed);
-    	elevatorMotor2.set(1*defaultSpeed);
+    	if (!elevatorUpSwitch.get()){
+    		elevatorMotor.set(1*defaultSpeed);
+    		elevatorMotor2.set(1*defaultSpeed);
+    	}
     }
     
     public void lower() {
-    	elevatorMotor.set(-1*defaultSpeed);
-    	elevatorMotor2.set(-1*defaultSpeed);
+    	if (!elevatorDownSwitch.get()){
+    		elevatorMotor.set(-1*defaultSpeed);
+    		elevatorMotor2.set(-1*defaultSpeed);
+    	}
     }
     
     public void control(double val) {
-    	elevatorMotor.set(val*defaultSpeed);
-    	elevatorMotor2.set(val*defaultSpeed);
+    	if (val > 0){
+    		lift();
+    	}else if (val < 0){
+    		lower();
+    	}else{
+    		stop();
+    	}
     }
     
     

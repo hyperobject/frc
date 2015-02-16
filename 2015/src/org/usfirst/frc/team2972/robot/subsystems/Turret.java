@@ -4,6 +4,7 @@ import org.usfirst.frc.team2972.robot.RobotMap;
 import org.usfirst.frc.team2972.robot.commands.TurretCommand;
 
 import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 

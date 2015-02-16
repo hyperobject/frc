@@ -21,7 +21,8 @@ public class MecanumDrive extends Subsystem {
 	}
 	
 	public void drive(double x, double y, double z){
-		robotDrive.mecanumDrive_Cartesian(x,y,z,0);
+		//robotDrive.mecanumDrive_Cartesian(x,y,z,0);
+		robotDrive.tankDrive(x,y);
 	}
 	
     public void initDefaultCommand() {
