@@ -33,8 +33,7 @@ public class OI {
     	 grabberSecondButton.whileHeld(new GrabberCommand(-1));
     	 grabberSecondButton.whenReleased(new GrabberCommand(0));
     	 
-    	 dropperSolenoidButton.whileHeld(new UnstoreToteManual(1));
-    	 dropperSolenoidButton.whenReleased(new UnstoreToteManual(0));
+    	 dropperSolenoidButton.whenPressed(new UnstoreTote());
     	 
     	 
      }

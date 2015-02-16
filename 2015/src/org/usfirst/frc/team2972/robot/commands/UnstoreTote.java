@@ -1,5 +1,7 @@
 package org.usfirst.frc.team2972.robot.commands;
 
+import org.usfirst.frc.team2972.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -7,24 +9,23 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class UnstoreTote extends CommandBase {
-    private boolean isDone = false;
+	private boolean isDone;
     public UnstoreTote() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
-    	super("UnstoreTote");
-    	requires(dropper);
+    	super("UnstoreToteManual");
+        requires(dropper);
+        isDone = false;
     }
-
     protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	dropper.out();
-    	Timer.delay(3);
-    	dropper.in();
-    	isDone = true;
-    }
+        	dropper.out();
+        	Timer.delay(RobotMap.dropTime);
+        	dropper.in();
+        	isDone = true;
+        	}
+
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
@@ -33,9 +34,6 @@ public class UnstoreTote extends CommandBase {
 
     // Called once after isFinished returns true
     protected void end() {
-    	dropper.in();
-    	Timer.delay(2);
-    	dropper.stop();
     }
     
     protected void interrupted() {

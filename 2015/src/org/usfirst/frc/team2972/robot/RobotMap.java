@@ -22,14 +22,14 @@ public class RobotMap {
 	//buttons
 	public static final int grabberFirstButtonPort = 6;
 	public static final int grabberSecondButtonPort = 5;
-	public static final int dropperSolenoidButtonPort = 10;
+	public static final int dropperSolenoidButtonPort = 9;
 	
 	//Double Solenoid
 	public static final int grabberSolenoidPort = 2;
 	public static final int grabberSolenoidPort2 = 3;
 	public static final int dropperSolenoidPort = 0;
 	public static final int dropperSolenoidPort2 = 1;
-	public static final double dropSpeed = 1.3;
+	public static final double dropTime = 1.3;
 	
 	//sensors
 	public static final int arduinoPort = 0;
