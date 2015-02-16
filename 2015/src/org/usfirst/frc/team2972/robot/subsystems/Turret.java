@@ -43,6 +43,10 @@ public class Turret extends Subsystem {
     	return potentiometer.getValue();
     }
     
+    public float getPotentiometerDegrees(){
+    	return (getPotentiometerValue()/RobotMap.turretMax)*360;
+    }
+    
     public void turn(double dir){
     	turretMotor.set(dir*speed);
     }

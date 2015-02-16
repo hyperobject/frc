@@ -25,8 +25,10 @@ public class TurretCommand extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	SmartDashboard.putNumber("Potentiometer: ", turret.getPotentiometerValue());
+    	SmartDashboard.putNumber("Potentiometer Degrees: ", turret.getPotentiometerDegrees());
     	if (turret.getPotentiometerValue() < RobotMap.turretMax && turret.getPotentiometerValue() > 128){
     	turret.turn(OI.getStick(2).getRawAxis(4));
+    	
     	}
     }
 
