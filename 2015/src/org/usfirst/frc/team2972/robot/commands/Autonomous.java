@@ -26,17 +26,17 @@ public class Autonomous extends CommandGroup {
         // arm.
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
-    	addSequential(new StoreTote());
+    	addParallel(new StoreTote());
     	addSequential(new PassingTrash());
     	
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
-    	addSequential(new StoreTote());
+    	addParallel(new StoreTote());
     	addSequential(new PassingTrash());
     	
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
-    	addSequential(new StoreTote());
+    	addParallel(new StoreTote());
     	
     	addSequential(new StrafeRight());
     	addSequential(new UnstoreTote());

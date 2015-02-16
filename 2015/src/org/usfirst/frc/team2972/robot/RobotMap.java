@@ -29,7 +29,7 @@ public class RobotMap {
 	public static final int grabberSolenoidPort2 = 3;
 	public static final int dropperSolenoidPort = 0;
 	public static final int dropperSolenoidPort2 = 1;
-	public static final double dropTime = 1.3;
+	public static final double dropTime = 0.6;
 	
 	//sensors
 	public static final int arduinoPort = 0;
