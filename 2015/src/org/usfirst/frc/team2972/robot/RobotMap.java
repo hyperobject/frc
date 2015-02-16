@@ -35,5 +35,6 @@ public class RobotMap {
 	public static final int arduinoPort = 0;
 	public static final int elevatorUpSwitchPort = 1; //TODO find the real ports for these
 	public static final int elevatorDownSwitchPort = 2;
-	public static BuiltInAccelerometer accelerometer = new BuiltInAccelerometer();
+	public static final int turretBack = 4000;
+	public static final int turretForward = 0;
 }
