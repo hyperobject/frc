@@ -23,11 +23,11 @@ public class PickUp extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	grabber.open();
-    	Timer.delay(2);
+    	Timer.delay(1);
     	grabber.stop();
     	Timer.delay(1);
     	grabber.close();
-    	Timer.delay(2);
+    	Timer.delay(1);
     	grabber.stop();
     	isDone = true;
    }

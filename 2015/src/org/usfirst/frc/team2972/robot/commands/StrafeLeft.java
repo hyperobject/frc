@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.Timer;
  *
  */
 public class StrafeLeft extends CommandBase {
-	private double speed = 0.3;
+	private double speed = 1;
 	private boolean isDone = false;
     public StrafeLeft() {
     	super("StrafeLeft");
@@ -23,7 +23,7 @@ public class StrafeLeft extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	mecanumDrive.drive( 0, 0, (-1 * speed));
-    	Timer.delay(5);
+    	Timer.delay(1);
     	isDone = true;
     }
 

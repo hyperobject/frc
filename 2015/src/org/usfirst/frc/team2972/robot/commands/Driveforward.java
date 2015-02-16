@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.Timer;
  *
  */
 public class Driveforward extends CommandBase {
-	private double speed = 0.3;
+	private double speed = 1;
 	private boolean isDone = false;
     public Driveforward() {
     	
@@ -24,7 +24,7 @@ public class Driveforward extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	mecanumDrive.drive(speed, 0, 0);
-    	Timer.delay(5);
+    	Timer.delay(1);
     	isDone = true;
     }
 
