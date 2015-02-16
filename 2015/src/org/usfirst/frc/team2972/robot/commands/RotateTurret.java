@@ -32,14 +32,12 @@ public class RotateTurret extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if (direction == 1){
-        	return (turret.getPotentiometerValue()==RobotMap.turretForward);
-        } else if (direction == -1) {
-        	return (turret.getPotentiometerValue()==RobotMap.turretBack);
-        }
-        return true;
+    	if (turret.getPotentiometerValue() > 3900 && turret.getPotentiometerValue() < 150){
+    		return true;
+    	} else {
+    		return (Math.abs(turret.getPotentiometerValue() - RobotMap.turretDirs[direction/4])<5);
+    	}
     }
-
     // Called once after isFinished returns true
     protected void end() {
     	turret.stop();
