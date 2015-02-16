@@ -1,7 +1,10 @@
 package org.usfirst.frc.team2972.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc.team2972.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
 /**
@@ -15,7 +18,7 @@ public class GrabberCommand extends CommandBase {
     public GrabberCommand(int dir) {
     	super("GrabberCommandOpen");
         requires(grabber);
-        int direction = dir;
+        direction = dir;
     }
 
     // Called just before this Command runs the first time

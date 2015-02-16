@@ -12,17 +12,16 @@ import org.usfirst.frc.team2972.robot.commands.*;
  */
 public class OI {
     
-     private static Joystick stick = new Joystick(1);
+     private static Joystick stick1 = new Joystick(0);
+     private static Joystick stick2 = new Joystick(1);
     
      //Button turretRightButton = new JoystickButton(getStick(), RobotMap.turretRightButtonPort);
      //Button turretLeftButton = new JoystickButton(getStick(),RobotMap.turretLeftButtonPort);
      
-     Button grabberFirstButton = new JoystickButton(getStick(), RobotMap.grabberFirstButtonPort);
-     Button grabberSecondButton = new JoystickButton(getStick(),RobotMap.grabberSecondButtonPort);
+     Button grabberFirstButton = new JoystickButton(getStick(2), RobotMap.grabberFirstButtonPort);
+     Button grabberSecondButton = new JoystickButton(getStick(2),RobotMap.grabberSecondButtonPort);
      
-     Button dropperSolenoidButton = new JoystickButton(getStick(), RobotMap.dropperSolenoidButtonPort);
-     Button dropperSolenoidButton2 = new JoystickButton(getStick(),RobotMap.dropperSolenoidButtonPort2);
-     
+     Button dropperSolenoidButton = new JoystickButton(getStick(2), RobotMap.dropperSolenoidButtonPort);
      //Button elevato'''''''''''''''''''''''''''''irstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
      //Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
@@ -37,18 +36,21 @@ public class OI {
     	 dropperSolenoidButton.whileHeld(new UnstoreToteManual(1));
     	 dropperSolenoidButton.whenReleased(new UnstoreToteManual(0));
     	 
-    	 dropperSolenoidButton2.whileHeld(new UnstoreToteManual(-1));
-    	 dropperSolenoidButton2.whenReleased(new UnstoreToteManual(0));
-    	 
     	 
      }
 
-	public static Joystick getStick() {
-		return stick;
+	public static Joystick getStick(int stick) {
+		if (stick == 1){
+			return stick1;
+		} else if (stick == 2){
+			return stick2;
+		} else {
+			return stick1;
+		}
 	}
 
 	public static void setStick(Joystick stick) {
-		OI.stick = stick;
+		OI.stick1 = stick;
 	}
 
      

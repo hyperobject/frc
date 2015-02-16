@@ -1,5 +1,7 @@
 package org.usfirst.frc.team2972.robot.commands;
 
+import org.usfirst.frc.team2972.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -12,7 +14,7 @@ public class UnstoreToteManual extends CommandBase {
     public UnstoreToteManual(int dir) {
     	super("UnstoreToteManual");
         requires(dropper);
-        int direction = dir;
+        direction = dir;
     }
     protected void initialize() {
     }
@@ -21,6 +23,8 @@ public class UnstoreToteManual extends CommandBase {
     protected void execute() {
     	if (direction == 1) {
         	dropper.out();
+        	Timer.delay(RobotMap.dropSpeed);
+        	dropper.in();
         	} else if (direction == -1) {
         	dropper.in();
         	} else {

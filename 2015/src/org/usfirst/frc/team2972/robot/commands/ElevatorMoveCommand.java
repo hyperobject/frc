@@ -22,12 +22,12 @@ public class ElevatorMoveCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	elevator.control(OI.getStick().getRawAxis(5));
+    	elevator.control(OI.getStick(2).getRawAxis(1));
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return (OI.getStick() == null);
+        return (OI.getStick(2) == null);
     }
 
     // Called once after isFinished returns true

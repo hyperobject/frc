@@ -19,11 +19,11 @@ public class Grabber extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
 	public void open() {
-    	grabberSolenoid.set(DoubleSolenoid.Value.kForward);
+    	grabberSolenoid.set(DoubleSolenoid.Value.kReverse);
     }
     
     public void close() {
-        grabberSolenoid.set(DoubleSolenoid.Value.kReverse);
+        grabberSolenoid.set(DoubleSolenoid.Value.kForward);
     }
      public void stop() {
     	grabberSolenoid.set(DoubleSolenoid.Value.kOff);

@@ -14,11 +14,12 @@ public class Elevator extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	
-public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort1);
-public static Talon elevatorMotor2 = new Talon(RobotMap.elevatorMotorPort2);
-public static DigitalInput elevatorUpSwitch = new DigitalInput(RobotMap.elevatorUpSwitchPort);
-public static DigitalInput elevatorDownSwitch = new DigitalInput(RobotMap.elevatorDownSwitchPort);
-	double defaultSpeed = .5;
+	public static Talon elevatorMotor = new Talon(RobotMap.elevatorMotorPort1);
+	public static Talon elevatorMotor2 = new Talon(RobotMap.elevatorMotorPort2);
+	public static DigitalInput elevatorUpSwitch = new DigitalInput(RobotMap.elevatorUpSwitchPort);
+	public static DigitalInput elevatorDownSwitch = new DigitalInput(RobotMap.elevatorDownSwitchPort);
+	double defaultSpeed = 1;
+	
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());

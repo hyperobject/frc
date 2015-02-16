@@ -11,6 +11,7 @@ public class UnstoreTote extends CommandBase {
     public UnstoreTote() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	super("UnstoreTote");
     	requires(dropper);
     }
 
@@ -20,8 +21,8 @@ public class UnstoreTote extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	dropper.out();
-    	Timer.delay(2);
-    	dropper.stop();
+    	Timer.delay(3);
+    	dropper.in();
     	isDone = true;
     }
 
