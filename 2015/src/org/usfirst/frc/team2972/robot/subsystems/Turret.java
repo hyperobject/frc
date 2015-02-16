@@ -39,7 +39,7 @@ public class Turret extends Subsystem {
     	turretMotor.set(0);
     }
     
-    public int getPotentiometerValue(){
+    public float getPotentiometerValue(){
     	return potentiometer.getValue();
     }
     
