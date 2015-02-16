@@ -4,6 +4,7 @@ import org.usfirst.frc.team2972.robot.OI;
 import org.usfirst.frc.team2972.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Talon;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -23,6 +24,7 @@ public class TurretCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	SmartDashboard.putNumber("Potentiometer: ", turret.getPotentiometerValue());
     	turret.turn(OI.getStick(2).getRawAxis(4));
     }
 
