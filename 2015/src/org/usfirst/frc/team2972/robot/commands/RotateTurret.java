@@ -23,11 +23,7 @@ public class RotateTurret extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if (direction == -1) {
-    		turret.turnRight();
-    	} else if (direction == 1) {
-    		turret.turnLeft();
-    	}
+    	turret.turnLeft();
     }
 
     // Make this return true when this Command no longer needs to run execute()
