@@ -6,6 +6,7 @@ import org.usfirst.frc.team2972.robot.commands.ElevatorMoveCommand;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -42,11 +43,20 @@ public class Elevator extends Subsystem {
     	}
     }
     
+
+    
     public void control(double val) {
-    	if (val > 0){
-    		lift();
-    	}else if (val < 0){
-    		lower();
+    	SmartDashboard.putNumber("Elevator Controll", val);
+    	if (val < 0){
+        	if (elevatorUpSwitch.get()){
+        		elevatorMotor.set(val*defaultSpeed);
+        		elevatorMotor2.set(val*defaultSpeed);
+        	}
+    	}else if (val > 0){
+    		if (elevatorDownSwitch.get()){
+        		elevatorMotor.set(val*defaultSpeed);
+        		elevatorMotor2.set(val*defaultSpeed);
+        	}
     	}else{
     		stop();
     	}
