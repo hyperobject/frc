@@ -21,6 +21,7 @@ public class Elevator extends Subsystem {
 	public static DigitalInput elevatorUpSwitch = new DigitalInput(RobotMap.elevatorUpSwitchPort);
 	public static DigitalInput elevatorDownSwitch = new DigitalInput(RobotMap.elevatorDownSwitchPort);
 	
+	public static int cnt = 0;
 	double defaultSpeed = 1;
 	
     public void initDefaultCommand() {
@@ -46,7 +47,11 @@ public class Elevator extends Subsystem {
 
     
     public void control(double val) {
+    	cnt = cnt + 1;
     	SmartDashboard.putNumber("Elevator Controll", val);
+    	SmartDashboard.putBoolean("Upper Switch", elevatorUpSwitch.get());
+    	SmartDashboard.putBoolean("Lowwer Switch", elevatorDownSwitch.get());
+    	SmartDashboard.putNumber("Elevator Count: ", cnt);
     	if (val < 0){
         	if (elevatorUpSwitch.get()){
         		elevatorMotor.set(val*defaultSpeed);

@@ -22,12 +22,13 @@ public class MecanumDrive extends Subsystem {
 	}
 	
 	public void drive(double x, double y, double z){
-		//robotDrive.mecanumDrive_Cartesian(x,y,z,0);
-		if (Math.abs(z) > .05){
-			robotDrive.mecanumDrive_Cartesian(0,0,z,0);
-		}else{
-			robotDrive.tankDrive(x,y);
-		}
+		robotDrive.mecanumDrive_Cartesian(x,y,z,0);
+		return;
+//		if (Math.abs(z) > .05){
+//			robotDrive.mecanumDrive_Cartesian(0,0,z,0);
+//		}else{
+//			robotDrive.tankDrive(x,y);
+//		}
 	}
 	
     public void initDefaultCommand() {

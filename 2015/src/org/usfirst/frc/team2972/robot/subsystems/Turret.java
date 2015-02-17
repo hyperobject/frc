@@ -40,6 +40,30 @@ public class Turret extends Subsystem {
     	turretMotor.set(0);
     }
     
+    public void snap90(){
+    	while((getPotentiometerValue()/RobotMap.turretMax)*360 != 90){
+    	turretMotor.set(1*speed);
+    	}
+    }
+    
+    public void snap180(){
+    	while((getPotentiometerValue()/RobotMap.turretMax)*360 != 180){
+    	turretMotor.set(1*speed);
+    	}
+    }
+    
+    public void snap270(){
+    	while((getPotentiometerValue()/RobotMap.turretMax)*360 != 270){
+    	turretMotor.set(-1*speed);
+    	}
+    }
+    
+    public void snap360(){
+    	while((getPotentiometerValue()/RobotMap.turretMax)*360 != 360){
+    	turretMotor.set(-1*speed);
+    	}
+    }
+    
     public float getPotentiometerValue(){
     	return potentiometer.getValue();
     }
