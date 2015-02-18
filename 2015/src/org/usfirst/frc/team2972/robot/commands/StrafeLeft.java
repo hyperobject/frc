@@ -12,10 +12,8 @@ public class StrafeLeft extends CommandBase {
     public StrafeLeft() {
     	super("StrafeLeft");
     	requires(mecanumDrive);
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+    	setTimeout(1);
     }
-
 
 	// Called just before this Command runs the first time
     protected void initialize() {
@@ -23,19 +21,17 @@ public class StrafeLeft extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	mecanumDrive.drive( 0, 0, (-1 * speed));
-    	Timer.delay(1);
-    	isDone = true;
+    	mecanumDrive.drive(speed, 0, 0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return isDone;
+        return isTimedOut();
     }
 
     // Called once after isFinished returns true
     protected void end() {
-    	mecanumDrive.drive( 0, 0, 0);
+    	mecanumDrive.drive(0, 0, 0);;
     }
 
     // Called when another command which requires one or more of the same
