@@ -27,7 +27,7 @@ public class StoreTote extends CommandGroup {
     	addParallel(new ElevatorCommand(1));
     	addSequential(new RotateTurret(-1));
     	addSequential(new GrabberDrop());
-    	addSequential(new RotateTurret(1));
+    	addParallel(new RotateTurret(1));
     	addSequential(new ElevatorCommand(-1));
     }
 }

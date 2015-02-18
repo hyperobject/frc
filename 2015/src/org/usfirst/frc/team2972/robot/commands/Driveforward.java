@@ -24,7 +24,7 @@ public class Driveforward extends CommandBase {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	mecanumDrive.drive(speed, 0, 0);
-    	Timer.delay(1);
+    	Timer.delay(5);
     	isDone = true;
     }
 

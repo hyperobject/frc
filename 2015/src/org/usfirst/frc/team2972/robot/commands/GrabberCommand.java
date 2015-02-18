@@ -16,7 +16,7 @@ public class GrabberCommand extends CommandBase {
 	private boolean isDone = false;
 	
     public GrabberCommand(int dir) {
-    	super("GrabberCommandOpen");
+    	super("GrabberCommand");
         requires(grabber);
         direction = dir;
     }
@@ -34,11 +34,12 @@ public class GrabberCommand extends CommandBase {
     	} else {
     	grabber.stop();
     	}
+    	isDone = true;
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return isDone;
     }
 
     // Called once after isFinished returns true

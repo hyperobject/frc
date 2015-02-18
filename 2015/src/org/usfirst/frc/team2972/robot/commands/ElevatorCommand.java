@@ -1,12 +1,13 @@
 package org.usfirst.frc.team2972.robot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *@author connor hudson
  */
 public class ElevatorCommand extends CommandBase {
-
+    private boolean isDone = false;
 	private int direction;
     public ElevatorCommand(int dir) {
         // Use requires() here to declare subsystem dependencies
@@ -31,13 +32,13 @@ public class ElevatorCommand extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if (direction == 1){
-        	return elevator.up();
-        } else if (direction == -1){
-        	return elevator.down();
-        } else{
-        	return true;
-        }
+    	if (direction == 1){
+    		return elevator.isUp();
+    	} else if (direction == -1){
+    		return elevator.isDown();
+    	} else {
+    		return true;
+    	}
     }
 
     // Called once after isFinished returns true

@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team2972.robot.commands.Autonomous;
 import org.usfirst.frc.team2972.robot.commands.CommandBase;
 import org.usfirst.frc.team2972.robot.commands.CommandBase;
+import org.usfirst.frc.team2972.robot.commands.SimpleAuto;
 import org.usfirst.frc.team2972.robot.subsystems.*;
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -35,11 +36,12 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
+    	
 		CommandBase.init();
 		
 		CommandBase.compressor.setClosedLoopControl(true);
 		
-		//autonomousCommand = new Autonomous();
+		autonomousCommand = new SimpleAuto();
     }
 	
 	public void disabledPeriodic() {

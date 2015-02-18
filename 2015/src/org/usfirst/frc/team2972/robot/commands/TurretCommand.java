@@ -28,7 +28,7 @@ public class TurretCommand extends CommandBase {
     	SmartDashboard.putNumber("Potentiometer Degrees: ", turret.getPotentiometerDegrees());
     	
     	if (turret.getPotentiometerValue() < RobotMap.turretMax - 30 && turret.getPotentiometerValue() > RobotMap.turretMin + 30){
-    	turret.turn(OI.getStick(2).getRawAxis(4));
+    	turret.turn(-1*OI.getStick(2).getRawAxis(4));
     	}
     }
 

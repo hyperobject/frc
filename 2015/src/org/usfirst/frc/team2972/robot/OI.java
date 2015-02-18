@@ -22,6 +22,7 @@ public class OI {
      Button grabberSecondButton = new JoystickButton(getStick(2),RobotMap.grabberSecondButtonPort);
      
      Button dropperSolenoidButton = new JoystickButton(getStick(2), RobotMap.dropperSolenoidButtonPort);
+     Button dropperSolenoidSecondButton = new JoystickButton(getStick(1), RobotMap.dropperSolenoidButtonPort);
      //Button elevato'''''''''''''''''''''''''''''irstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
      //Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
@@ -34,8 +35,9 @@ public class OI {
     	 grabberSecondButton.whenReleased(new GrabberCommand(0));
     	 
     	 dropperSolenoidButton.whenPressed(new UnstoreTote());
-    	 
-    	 //(stick2.getPOV() == 90).whenPressed(new RotateTurret90(1));
+    	 dropperSolenoidButton.whenPressed(new GrabberCommand(1));
+    	 dropperSolenoidSecondButton.whenPressed(new UnstoreTote());
+    	 dropperSolenoidSecondButton.whenPressed(new GrabberCommand(1));
      }
 
 	public static Joystick getStick(int stick) {

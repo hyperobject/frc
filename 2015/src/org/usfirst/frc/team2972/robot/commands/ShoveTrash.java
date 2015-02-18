@@ -5,9 +5,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class PassingTrash extends CommandGroup {
+public class ShoveTrash extends CommandGroup {
     
-    public  PassingTrash() {
+    public  ShoveTrash() {
         // Add Commands here:
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());

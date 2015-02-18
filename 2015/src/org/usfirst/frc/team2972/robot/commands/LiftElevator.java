@@ -24,7 +24,7 @@ public class LiftElevator extends CommandBase {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return elevator.up(); //elevator switch triggered
+        return elevator.isUp(); //elevator switch triggered
     }
 
     // Called once after isFinished returns true

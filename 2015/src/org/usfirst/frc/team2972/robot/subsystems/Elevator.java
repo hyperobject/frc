@@ -31,16 +31,16 @@ public class Elevator extends Subsystem {
     }
     
     public void lift() {
-    	if (!elevatorUpSwitch.get()){
-    		elevatorMotor.set(1*defaultSpeed);
-    		elevatorMotor2.set(1*defaultSpeed);
+    	if (!isUp()){
+    		elevatorMotor.set(-.5*defaultSpeed);
+    		elevatorMotor2.set(-.5*defaultSpeed);
     	}
     }
     
     public void lower() {
-    	if (!elevatorDownSwitch.get()){
-    		elevatorMotor.set(-1*defaultSpeed);
-    		elevatorMotor2.set(-1*defaultSpeed);
+    	if (!isDown()){
+    		elevatorMotor.set(.6*defaultSpeed);
+    		elevatorMotor2.set(.6*defaultSpeed);
     	}
     }
     
@@ -49,16 +49,16 @@ public class Elevator extends Subsystem {
     public void control(double val) {
     	cnt = cnt + 1;
     	SmartDashboard.putNumber("Elevator Controll", val);
-    	SmartDashboard.putBoolean("Upper Switch", elevatorUpSwitch.get());
-    	SmartDashboard.putBoolean("Lowwer Switch", elevatorDownSwitch.get());
+    	SmartDashboard.putNumber("Upper Switch", elevatorUpSwitch.get()?1:0);
+    	SmartDashboard.putBoolean("Lower Switch", elevatorDownSwitch.get());
     	SmartDashboard.putNumber("Elevator Count: ", cnt);
     	if (val < 0){
-        	if (elevatorUpSwitch.get()){
+        	if (!isUp()){
         		elevatorMotor.set(val*defaultSpeed);
         		elevatorMotor2.set(val*defaultSpeed);
         	}
     	}else if (val > 0){
-    		if (elevatorDownSwitch.get()){
+    		if (!isDown()){
         		elevatorMotor.set(val*defaultSpeed);
         		elevatorMotor2.set(val*defaultSpeed);
         	}
@@ -73,12 +73,12 @@ public class Elevator extends Subsystem {
     	elevatorMotor2.set(0);
     }
     
-    public boolean up() {
-    	return elevatorUpSwitch.get();
+    public boolean isUp() {
+    	return !elevatorUpSwitch.get();
     }
     
-    public boolean down() {
-    	return elevatorDownSwitch.get();
+    public boolean isDown() {
+    	return !elevatorDownSwitch.get();
     }
 }
 

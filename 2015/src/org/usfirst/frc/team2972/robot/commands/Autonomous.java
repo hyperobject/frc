@@ -27,12 +27,12 @@ public class Autonomous extends CommandGroup {
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
     	addParallel(new StoreTote());
-    	addSequential(new PassingTrash());
+    	addSequential(new ShoveTrash());
     	
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
     	addParallel(new StoreTote());
-    	addSequential(new PassingTrash());
+    	addSequential(new ShoveTrash());
     	
     	addSequential(new DriveUntilTote());
     	addSequential(new PickUp());
