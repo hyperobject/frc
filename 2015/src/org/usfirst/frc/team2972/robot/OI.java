@@ -23,7 +23,7 @@ public class OI {
      
      Button dropperSolenoidButton = new JoystickButton(getStick(2), RobotMap.dropperSolenoidButtonPort);
      Button dropperSolenoidSecondButton = new JoystickButton(getStick(1), RobotMap.dropperSolenoidButtonPort);
-     //Button elevato'''''''''''''''''''''''''''''irstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
+     //Button elevatorFirstButton = new JoystickButton(getStick(), RobotMap.elevatorFirstButtonPort);
      //Button elevatorSecondButton = new JoystickButton(getStick(),RobotMap.elevatorSecondButtonPort);
      
      public OI(){
